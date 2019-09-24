@@ -1,0 +1,4 @@
+spring:
+  h2:
+    console:
+      enabled: true # H2 DB 활성화 옵션

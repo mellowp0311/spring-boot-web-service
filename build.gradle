@@ -22,6 +22,9 @@ repositories {
     mavenCentral()
 }
 
+// Spring Boot Overriding
+ext['hibernate.version'] = '5.2.11.Final'
+
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -32,3 +35,4 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+
