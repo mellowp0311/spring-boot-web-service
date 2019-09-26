@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: local # 기본 환경 선택
+  h2:
+    console:
+      enabled: true # H2 DB 활성화 옵션
+
+
+---
+spring:
+  profiles: local
+  datasource:
+    data: classpath:authority-h2.sql
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  h2:
+    console:
+      enabled: true

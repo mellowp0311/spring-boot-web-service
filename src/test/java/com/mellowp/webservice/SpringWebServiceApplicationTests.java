@@ -1,4 +1,4 @@
-package com.mellowp.spring.service;
+package com.mellowp.webservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
