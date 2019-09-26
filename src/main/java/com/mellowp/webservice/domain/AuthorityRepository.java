@@ -1,4 +1,4 @@
-package com.mellowp.spring.service.domain;
+package com.mellowp.webservice.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

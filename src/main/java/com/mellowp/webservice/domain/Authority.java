@@ -1,4 +1,4 @@
-package com.mellowp.spring.service.domain;
+package com.mellowp.webservice.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,7 +19,7 @@ public class Authority extends BaseTimeEntity {
     // TODO : - DB 데이터 작업의 경우 쿼리를 작성하여 실행하기 보다는, 해당 Entity 클래스의 수정을 통해서 작업
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(length = 500, nullable = false)

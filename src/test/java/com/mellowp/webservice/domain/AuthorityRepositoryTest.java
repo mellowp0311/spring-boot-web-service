@@ -1,4 +1,4 @@
-package com.mellowp.spring.service.domain;
+package com.mellowp.webservice.domain;
 
 import org.junit.After;
 import org.junit.Test;
@@ -28,28 +28,28 @@ public class AuthorityRepositoryTest {
     }
 
     @Test
-    public void board_data_read_test(){
+    public void authority_data_read_test(){
 
         // given
-        authorityRepository.save(Authority.builder().name("전시관리").code("auth-display-0001").description("전시관리 메뉴권한").build());
+        authorityRepository.save(Authority.builder().name("QA").code("auth-test-0001").description("QA 권한").build());
 
         // when
         List<Authority> authorityList = authorityRepository.findAll();
 
         // then
         Authority authority = authorityList.get(0);
-        assertThat(authority.getName(), is("전시관리"));
-        assertThat(authority.getCode(), is("auth-display-0001"));
+        assertThat(authority.getName(), is("QA"));
+        assertThat(authority.getCode(), is("auth-test-0001"));
 
     }
 
 
     @Test
-    public void board_data_register_test(){
+    public void authority_data_register_test(){
 
         // given
         LocalDateTime now = LocalDateTime.now();
-        authorityRepository.save(Authority.builder().name("상품관리").code("auth-product-0001").description("상품관리 메뉴권한").build());
+        authorityRepository.save(Authority.builder().name("QA").code("auth-test-0001").description("QA 권한").build());
 
         // when
         List<Authority> authorityList = authorityRepository.findAll();

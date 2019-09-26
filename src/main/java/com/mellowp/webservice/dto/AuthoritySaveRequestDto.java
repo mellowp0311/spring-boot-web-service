@@ -1,12 +1,17 @@
-package com.mellowp.spring.service.dto;
+package com.mellowp.webservice.dto;
 
 
-import com.mellowp.spring.service.domain.Authority;
+import com.mellowp.webservice.domain.Authority;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ *
+ * @author mellowp
+ * @date   2019-09-24
+ */
 @Getter
 @Setter
 @NoArgsConstructor

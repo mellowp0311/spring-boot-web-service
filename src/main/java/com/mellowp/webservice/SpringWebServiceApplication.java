@@ -1,4 +1,4 @@
-package com.mellowp.spring.service;
+package com.mellowp.webservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
