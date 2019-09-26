@@ -6,13 +6,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
+
 @Getter
 @Entity
+@NoArgsConstructor
 public class Authority extends BaseTimeEntity {
 
     // TODO : 실제 DB 테이블과 매칭될 클래스
@@ -20,14 +23,18 @@ public class Authority extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @ApiModelProperty(value = "유니크 키 값")
     private Long id;
 
     @Column(length = 500, nullable = false)
+    @ApiModelProperty(value = "권한명")
     private String name;
 
+    @ApiModelProperty(value = "권한코드")
     private String code;
 
     @Column(columnDefinition = "TEXT", nullable = false)
+    @ApiModelProperty(value = "권한설명")
     private String description;
 
     @Builder
