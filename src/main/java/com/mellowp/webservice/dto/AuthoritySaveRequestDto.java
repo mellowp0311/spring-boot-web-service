@@ -3,6 +3,7 @@ package com.mellowp.webservice.dto;
 
 import com.mellowp.webservice.domain.Authority;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -17,10 +18,13 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AuthoritySaveRequestDto {
 
+    @ApiModelProperty(value = "권한명", required = true)
     private String name;
 
+    @ApiModelProperty(value = "권한코드", required = true)
     private String code;
 
+    @ApiModelProperty(value = "권한설명")
     private String description;
 
     public Authority toEntity(){
